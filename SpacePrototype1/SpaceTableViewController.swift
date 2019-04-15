@@ -97,9 +97,9 @@ class SpaceTableViewController: UITableViewController {
     
     private func loadSampleSpaces() {
         
-        let photo1 = UIImage(named: "img1")
-        let photo2 = UIImage(named: "img1")
-        let photo3 = UIImage(named: "img1")
+        let photo1 = UIImage(named: "Uris_Cafe")
+        let photo2 = UIImage(named: "Joes_Coffee")
+        let photo3 = UIImage(named: "Carleton_Commons")
         
         guard let space1 = Space(name: "Uris Cafe", photo: photo1) else {
             fatalError("Unable to instantiate meal1")

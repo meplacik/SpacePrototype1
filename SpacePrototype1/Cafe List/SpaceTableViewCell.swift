@@ -18,6 +18,7 @@ class SpaceTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        photoImageView.layer.cornerRadius = 5
         // Initialization code
     }
 

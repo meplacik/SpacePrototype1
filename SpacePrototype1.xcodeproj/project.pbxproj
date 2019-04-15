@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041001EC2264E0C100A47E51 /* CafeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041001EB2264E0C100A47E51 /* CafeListViewController.swift */; };
 		3A690A93226402C0002E5B91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A690A92226402C0002E5B91 /* AppDelegate.swift */; };
 		3A690A95226402C0002E5B91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A690A94226402C0002E5B91 /* ViewController.swift */; };
 		3A690A98226402C0002E5B91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A690A96226402C0002E5B91 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041001EB2264E0C100A47E51 /* CafeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeListViewController.swift; sourceTree = "<group>"; };
 		3A690A8F226402C0002E5B91 /* SpacePrototype1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpacePrototype1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A690A92226402C0002E5B91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A690A94226402C0002E5B91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041001EA2264E0AA00A47E51 /* Cafe List */ = {
+			isa = PBXGroup;
+			children = (
+				041001EB2264E0C100A47E51 /* CafeListViewController.swift */,
+				3A690AC222641269002E5B91 /* SpaceTableViewCell.swift */,
+			);
+			path = "Cafe List";
+			sourceTree = "<group>";
+		};
+		041001ED2264E14100A47E51 /* Cafe Viewing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Cafe Viewing";
+			sourceTree = "<group>";
+		};
 		3A690A86226402C0002E5B91 = {
 			isa = PBXGroup;
 			children = (
@@ -107,10 +125,11 @@
 			isa = PBXGroup;
 			children = (
 				3A690A92226402C0002E5B91 /* AppDelegate.swift */,
-				3A690A94226402C0002E5B91 /* ViewController.swift */,
 				3A690A96226402C0002E5B91 /* Main.storyboard */,
+				041001EA2264E0AA00A47E51 /* Cafe List */,
+				041001ED2264E14100A47E51 /* Cafe Viewing */,
+				3A690A94226402C0002E5B91 /* ViewController.swift */,
 				3A690AC822641B1E002E5B91 /* Space.swift */,
-				3A690AC222641269002E5B91 /* SpaceTableViewCell.swift */,
 				3A690AC6226419B0002E5B91 /* SpaceTableViewController.swift */,
 				3A690A99226402C1002E5B91 /* Assets.xcassets */,
 				3A690A9B226402C1002E5B91 /* LaunchScreen.storyboard */,
@@ -274,6 +293,7 @@
 				3A690A95226402C0002E5B91 /* ViewController.swift in Sources */,
 				3A690AC322641269002E5B91 /* SpaceTableViewCell.swift in Sources */,
 				3A690A93226402C0002E5B91 /* AppDelegate.swift in Sources */,
+				041001EC2264E0C100A47E51 /* CafeListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZJXXG3ML3V;
+				DEVELOPMENT_TEAM = S38ZVE6L2C;
 				INFOPLIST_FILE = SpacePrototype1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -467,7 +487,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZJXXG3ML3V;
+				DEVELOPMENT_TEAM = S38ZVE6L2C;
 				INFOPLIST_FILE = SpacePrototype1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

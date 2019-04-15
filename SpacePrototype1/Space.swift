@@ -26,4 +26,8 @@ class Space {
         self.name = name
         self.photo = photo
     }
+    
+    func contains(_ string: String) -> Bool{
+        return name.contains(string)
+    }
 }
