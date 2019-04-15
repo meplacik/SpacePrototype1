@@ -18,6 +18,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var pickerView2: UIPickerView!
     @IBOutlet weak var pickerView3: UIPickerView!
     
+    @IBOutlet weak var capacityLabel: UILabel!
+    
+    
+    @IBOutlet weak var image1: UIImageView!
+    @IBOutlet weak var image2: UIImageView!
+    
     let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
     let hours = ["12:00","1:00","2:00","3:00","4:00","5:00","6:00","7:00","8:00","9:00","10:00","11:00"]
     let am_pm = ["AM","PM"]
@@ -28,7 +34,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if (pickerView == pickerView1){
-            let titleRow = days[row]
+            let titleRow = days[row].substring(3)
             return titleRow
         }
         else if (pickerView == pickerView2){
@@ -65,12 +71,34 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         else if(pickerView == pickerView3){
             textField3.text = am_pm[row]
         }
+        setImages()
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        image1.layer.masksToBounds = true
+        image2.layer.masksToBounds = true
         // Do any additional setup after loading the view, typically from a nib.
+    }
+
+    
+    let timeLapseImages:[Capacity] = [Capacity(rawImage: UIImage(named: "cafe-1.jpg")!, detectedImage: UIImage(named: "cafe1-results.jpg")!, capacity: 35, occupants: 30),
+                                      Capacity(rawImage: UIImage(named: "cafe-2.jpg")!, detectedImage: UIImage(named: "cafe2-results.jpg")!, capacity: 35, occupants: 23),
+                                      Capacity(rawImage: UIImage(named: "cafe-3.jpg")!, detectedImage: UIImage(named: "cafe3-results.jpg")!, capacity: 35, occupants: 26),
+                                      Capacity(rawImage: UIImage(named: "cafe-4.jpg")!, detectedImage: UIImage(named: "cafe4-results.jpg")!, capacity: 35, occupants: 22),
+                                      Capacity(rawImage: UIImage(named: "cafe-5.jpg")!, detectedImage: UIImage(named: "cafe5-results.jpg")!, capacity: 35, occupants: 26),
+                                      Capacity(rawImage: UIImage(named: "cafe-6.jpg")!, detectedImage: UIImage(named: "cafe6-results.jpg")!, capacity: 35, occupants: 12),
+                                      Capacity(rawImage: UIImage(named: "cafe-7.jpg")!, detectedImage: UIImage(named: "cafe7-results.jpg")!, capacity: 35, occupants: 8),
+                                      Capacity(rawImage: UIImage(named: "cafe-8.jpg")!, detectedImage: UIImage(named: "cafe8-results.jpg")!, capacity: 35, occupants: 2)]
+    var currentLapse = 0
+    func setImages(){
+        currentLapse += 1
+        currentLapse = currentLapse % (timeLapseImages.count - 1)
+        let capaity = timeLapseImages[currentLapse]
+        image1.image = capaity.rawImage
+        image2.image = capaity.detectedImage
+        capacityLabel.text = "Uris Cafe is \(capaity.capacityPercentage())% full. "
     }
 
 

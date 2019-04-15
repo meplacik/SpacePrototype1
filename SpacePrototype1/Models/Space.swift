@@ -15,6 +15,8 @@ class Space {
     var name: String
     var photo: UIImage?
     
+    
+    
     //MARK: Initialization
     
     init?(name: String, photo: UIImage?) {
