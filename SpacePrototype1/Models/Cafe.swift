@@ -8,18 +8,19 @@
 
 import UIKit
 
-class Space {
+class Cafe {
     
     //MARK: Properties
     
     var name: String
     var photo: UIImage?
-    
-    
+    let numberOfSeats: Int
+    var amenities: [Amenity]
+    var price: Price
     
     //MARK: Initialization
     
-    init?(name: String, photo: UIImage?) {
+    init?(name: String, photo: UIImage?,numberOfSeats: Int, amenities: [Amenity], price: Price) {
         // Initialization should fail if there is no name or if the rating is negative.
         if name.isEmpty {
             return nil
@@ -27,6 +28,9 @@ class Space {
         // Initialize stored properties.
         self.name = name
         self.photo = photo
+        self.numberOfSeats = numberOfSeats
+        self.amenities = amenities
+        self.price = price
     }
     
     func contains(_ string: String) -> Bool{

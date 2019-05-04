@@ -10,6 +10,11 @@
 		041001EC2264E0C100A47E51 /* CafeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041001EB2264E0C100A47E51 /* CafeListViewController.swift */; };
 		041001F02264F13C00A47E51 /* Capacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041001EF2264F13C00A47E51 /* Capacity.swift */; };
 		041001F32264F83E00A47E51 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041001F22264F83E00A47E51 /* StringExtension.swift */; };
+		04AEB17E227E04690085B063 /* Amenity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEB17D227E04690085B063 /* Amenity.swift */; };
+		04AEB180227E04EA0085B063 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEB17F227E04EA0085B063 /* Price.swift */; };
+		04AEB182227E05650085B063 /* CafeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AEB181227E05650085B063 /* CafeList.storyboard */; };
+		04AEB184227E064B0085B063 /* CafeViewing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AEB183227E064B0085B063 /* CafeViewing.storyboard */; };
+		04AEB186227E06AD0085B063 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEB185227E06AD0085B063 /* Data.swift */; };
 		3A690A93226402C0002E5B91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A690A92226402C0002E5B91 /* AppDelegate.swift */; };
 		3A690A95226402C0002E5B91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A690A94226402C0002E5B91 /* ViewController.swift */; };
 		3A690A98226402C0002E5B91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A690A96226402C0002E5B91 /* Main.storyboard */; };
@@ -19,8 +24,7 @@
 		3A690AB3226402C1002E5B91 /* SpacePrototype1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A690AB2226402C1002E5B91 /* SpacePrototype1UITests.swift */; };
 		3A690AC1226411CE002E5B91 /* img1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A690AC0226411CE002E5B91 /* img1.png */; };
 		3A690AC322641269002E5B91 /* SpaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A690AC222641269002E5B91 /* SpaceTableViewCell.swift */; };
-		3A690AC7226419B0002E5B91 /* SpaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A690AC6226419B0002E5B91 /* SpaceTableViewController.swift */; };
-		3A690AC922641B1E002E5B91 /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A690AC822641B1E002E5B91 /* Space.swift */; };
+		3A690AC922641B1E002E5B91 /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A690AC822641B1E002E5B91 /* Cafe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,11 @@
 		041001EB2264E0C100A47E51 /* CafeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeListViewController.swift; sourceTree = "<group>"; };
 		041001EF2264F13C00A47E51 /* Capacity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capacity.swift; sourceTree = "<group>"; };
 		041001F22264F83E00A47E51 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		04AEB17D227E04690085B063 /* Amenity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amenity.swift; sourceTree = "<group>"; };
+		04AEB17F227E04EA0085B063 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		04AEB181227E05650085B063 /* CafeList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CafeList.storyboard; sourceTree = "<group>"; };
+		04AEB183227E064B0085B063 /* CafeViewing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CafeViewing.storyboard; sourceTree = "<group>"; };
+		04AEB185227E06AD0085B063 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		3A690A8F226402C0002E5B91 /* SpacePrototype1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpacePrototype1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A690A92226402C0002E5B91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A690A94226402C0002E5B91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,8 +68,7 @@
 		3A690AB4226402C1002E5B91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A690AC0226411CE002E5B91 /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img1.png; path = ../Desktop/img1.png; sourceTree = "<group>"; };
 		3A690AC222641269002E5B91 /* SpaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceTableViewCell.swift; sourceTree = "<group>"; };
-		3A690AC6226419B0002E5B91 /* SpaceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceTableViewController.swift; sourceTree = "<group>"; };
-		3A690AC822641B1E002E5B91 /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
+		3A690AC822641B1E002E5B91 /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,7 @@
 		041001EA2264E0AA00A47E51 /* Cafe List */ = {
 			isa = PBXGroup;
 			children = (
+				04AEB181227E05650085B063 /* CafeList.storyboard */,
 				041001EB2264E0C100A47E51 /* CafeListViewController.swift */,
 				3A690AC222641269002E5B91 /* SpaceTableViewCell.swift */,
 			);
@@ -100,6 +109,7 @@
 		041001ED2264E14100A47E51 /* Cafe Viewing */ = {
 			isa = PBXGroup;
 			children = (
+				04AEB183227E064B0085B063 /* CafeViewing.storyboard */,
 				3A690A94226402C0002E5B91 /* ViewController.swift */,
 			);
 			path = "Cafe Viewing";
@@ -108,8 +118,10 @@
 		041001EE2264F10C00A47E51 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3A690AC822641B1E002E5B91 /* Space.swift */,
+				3A690AC822641B1E002E5B91 /* Cafe.swift */,
 				041001EF2264F13C00A47E51 /* Capacity.swift */,
+				04AEB17D227E04690085B063 /* Amenity.swift */,
+				04AEB17F227E04EA0085B063 /* Price.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -120,6 +132,14 @@
 				041001F22264F83E00A47E51 /* StringExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		04AEB187227E06B30085B063 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				04AEB185227E06AD0085B063 /* Data.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		3A690A86226402C0002E5B91 = {
@@ -151,7 +171,7 @@
 				041001EA2264E0AA00A47E51 /* Cafe List */,
 				041001ED2264E14100A47E51 /* Cafe Viewing */,
 				041001EE2264F10C00A47E51 /* Models */,
-				3A690AC6226419B0002E5B91 /* SpaceTableViewController.swift */,
+				04AEB187227E06B30085B063 /* Data */,
 				041001F12264F82E00A47E51 /* Extensions */,
 				3A690A99226402C1002E5B91 /* Assets.xcassets */,
 				3A690A9B226402C1002E5B91 /* LaunchScreen.storyboard */,
@@ -282,10 +302,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04AEB182227E05650085B063 /* CafeList.storyboard in Resources */,
 				3A690A9D226402C1002E5B91 /* LaunchScreen.storyboard in Resources */,
 				3A690AC1226411CE002E5B91 /* img1.png in Resources */,
 				3A690A9A226402C1002E5B91 /* Assets.xcassets in Resources */,
 				3A690A98226402C0002E5B91 /* Main.storyboard in Resources */,
+				04AEB184227E064B0085B063 /* CafeViewing.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,8 +332,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A690AC922641B1E002E5B91 /* Space.swift in Sources */,
-				3A690AC7226419B0002E5B91 /* SpaceTableViewController.swift in Sources */,
+				3A690AC922641B1E002E5B91 /* Cafe.swift in Sources */,
+				04AEB17E227E04690085B063 /* Amenity.swift in Sources */,
+				04AEB180227E04EA0085B063 /* Price.swift in Sources */,
+				04AEB186227E06AD0085B063 /* Data.swift in Sources */,
 				3A690A95226402C0002E5B91 /* ViewController.swift in Sources */,
 				3A690AC322641269002E5B91 /* SpaceTableViewCell.swift in Sources */,
 				041001F32264F83E00A47E51 /* StringExtension.swift in Sources */,

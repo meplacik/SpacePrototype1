@@ -8,7 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class CafeViewingViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    var cafe: Cafe!{
+        didSet{
+            setUpView()
+        }
+    }
 
     @IBOutlet weak var textField1: UITextField!
     @IBOutlet weak var textField2: UITextField!
@@ -27,6 +33,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
     let hours = ["12:00","1:00","2:00","3:00","4:00","5:00","6:00","7:00","8:00","9:00","10:00","11:00"]
     let am_pm = ["AM","PM"]
+    
+    func setUpView(){
+        
+    }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -82,7 +92,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    
     let timeLapseImages:[Capacity] = [Capacity(rawImage: UIImage(named: "cafe-1.jpg")!, detectedImage: UIImage(named: "cafe1-results.jpg")!, capacity: 35, occupants: 30),
                                       Capacity(rawImage: UIImage(named: "cafe-2.jpg")!, detectedImage: UIImage(named: "cafe2-results.jpg")!, capacity: 35, occupants: 23),
                                       Capacity(rawImage: UIImage(named: "cafe-3.jpg")!, detectedImage: UIImage(named: "cafe3-results.jpg")!, capacity: 35, occupants: 26),
@@ -91,14 +100,23 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                                       Capacity(rawImage: UIImage(named: "cafe-6.jpg")!, detectedImage: UIImage(named: "cafe6-results.jpg")!, capacity: 35, occupants: 12),
                                       Capacity(rawImage: UIImage(named: "cafe-7.jpg")!, detectedImage: UIImage(named: "cafe7-results.jpg")!, capacity: 35, occupants: 8),
                                       Capacity(rawImage: UIImage(named: "cafe-8.jpg")!, detectedImage: UIImage(named: "cafe8-results.jpg")!, capacity: 35, occupants: 2)]
+    
+    let idealImage1 = [Capacity(rawImage: UIImage(named: "cafe-1-ideal.jpg")!, detectedImage: UIImage(named: "cafe-1-results-ideal.jpg")!, capacity: 30, occupants: 24)]
+    let idealImage2 = [Capacity(rawImage: UIImage(named: "cafe-2-ideal.jpg")!, detectedImage: UIImage(named: "cafe-2-results-ideal.jpg")!, capacity: 12, occupants: 9)]
     var currentLapse = 0
     func setImages(){
-        currentLapse += 1
-        currentLapse = currentLapse % (timeLapseImages.count - 1)
-        let capaity = timeLapseImages[currentLapse]
+        var pmOffset = 0
+        if pickerView3.selectedRow(inComponent: 0) == 1{
+            pmOffset += 1
+        }
+        
+        let images = Data.getImage(for: cafe, weekDay: pickerView1.selectedRow(inComponent: 0), time: pickerView2.selectedRow(inComponent: 0) + pmOffset)
+       
+        let capaity = images[currentLapse]
         image1.image = capaity.rawImage
         image2.image = capaity.detectedImage
-        capacityLabel.text = "Uris Cafe is \(capaity.capacityPercentage())% full. "
+        
+        capacityLabel.text = "\(names[ViewController.iteration % 2]) is \(capaity.capacityPercentage())% full. "
     }
 
 

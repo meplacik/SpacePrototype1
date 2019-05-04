@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c03-0I-dzi">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cafe Viewing View Controller-->
+        <scene sceneID="dGh-ED-G6o">
+            <objects>
+                <viewController storyboardIdentifier="CafeViewing" id="c03-0I-dzi" customClass="CafeViewingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NL3-vS-T5M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SOp-UT-lkT">
+                                <rect key="frame" x="16" y="238" width="122" height="98"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="c03-0I-dzi" id="UTk-qP-d2c"/>
+                                    <outlet property="delegate" destination="c03-0I-dzi" id="Xim-VH-kpl"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Day of the Week and Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQT-b4-Mxn">
+                                <rect key="frame" x="16" y="158.5" width="382" height="20.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wtg-rE-BCv">
+                                <rect key="frame" x="162" y="243" width="124" height="88"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="c03-0I-dzi" id="B7w-Pz-4rX"/>
+                                    <outlet property="delegate" destination="c03-0I-dzi" id="zrG-gS-kvg"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pku-hj-nEO">
+                                <rect key="frame" x="286" y="255" width="112" height="65"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="c03-0I-dzi" id="uJM-W3-NVR"/>
+                                    <outlet property="delegate" destination="c03-0I-dzi" id="D2H-iw-NDQ"/>
+                                </connections>
+                            </pickerView>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gY5-QM-3Du">
+                                <rect key="frame" x="16" y="189" width="114" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mbd-zH-ZYf">
+                                <rect key="frame" x="170" y="189" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g7Y-Ej-YgU">
+                                <rect key="frame" x="306" y="189" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0S-mI-V8A">
+                                <rect key="frame" x="207" y="442" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Uris Cafe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHC-rR-92R">
+                                <rect key="frame" x="16" y="122" width="416" height="20.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3t-Ns-PNr">
+                                <rect key="frame" x="0.0" y="462" width="414" height="400"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Htb-mb-afv">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="414" id="af8-PY-nSG"/>
+                                            <constraint firstAttribute="height" constant="400" id="wlq-eX-qQB"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="du2-1w-Gox">
+                                        <rect key="frame" x="414" y="0.0" width="414" height="400"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="414" id="lpg-UF-c8d"/>
+                                            <constraint firstAttribute="height" constant="400" id="oZJ-dO-q8j"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="1wX-Lk-Ztn"/>
+                                    <constraint firstAttribute="trailing" secondItem="du2-1w-Gox" secondAttribute="trailing" id="6Rv-Qt-v7k"/>
+                                    <constraint firstItem="Htb-mb-afv" firstAttribute="leading" secondItem="e3t-Ns-PNr" secondAttribute="leading" id="7nU-5I-nk4"/>
+                                    <constraint firstAttribute="bottom" secondItem="Htb-mb-afv" secondAttribute="bottom" id="O9s-r4-GTU"/>
+                                    <constraint firstItem="du2-1w-Gox" firstAttribute="top" secondItem="e3t-Ns-PNr" secondAttribute="top" id="Pnn-UT-ac6"/>
+                                    <constraint firstItem="du2-1w-Gox" firstAttribute="leading" secondItem="Htb-mb-afv" secondAttribute="trailing" id="eqc-Kj-q8A"/>
+                                    <constraint firstAttribute="bottom" secondItem="du2-1w-Gox" secondAttribute="bottom" id="q8n-54-cni"/>
+                                    <constraint firstAttribute="width" constant="414" id="va7-sd-poD"/>
+                                    <constraint firstItem="Htb-mb-afv" firstAttribute="top" secondItem="e3t-Ns-PNr" secondAttribute="top" id="wvg-VE-039"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E0S-mI-V8A" firstAttribute="centerX" secondItem="YDT-WE-rZS" secondAttribute="centerX" id="1iI-W9-qcG"/>
+                            <constraint firstItem="YDT-WE-rZS" firstAttribute="trailing" secondItem="e3t-Ns-PNr" secondAttribute="trailing" id="dD5-4Z-Ofq"/>
+                            <constraint firstItem="e3t-Ns-PNr" firstAttribute="top" secondItem="E0S-mI-V8A" secondAttribute="bottom" constant="20" id="e4X-ye-YJI"/>
+                            <constraint firstItem="e3t-Ns-PNr" firstAttribute="leading" secondItem="YDT-WE-rZS" secondAttribute="leading" id="gIg-ia-zCj"/>
+                            <constraint firstItem="YDT-WE-rZS" firstAttribute="bottom" secondItem="e3t-Ns-PNr" secondAttribute="bottom" id="zA4-s4-B1E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YDT-WE-rZS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="I3x-hw-xbR"/>
+                    <connections>
+                        <outlet property="capacityLabel" destination="E0S-mI-V8A" id="ojf-Ya-tw4"/>
+                        <outlet property="image1" destination="Htb-mb-afv" id="Sgy-Fd-Wck"/>
+                        <outlet property="image2" destination="du2-1w-Gox" id="FOA-KB-nTt"/>
+                        <outlet property="pickerView1" destination="SOp-UT-lkT" id="QKG-CO-0gG"/>
+                        <outlet property="pickerView2" destination="wtg-rE-BCv" id="kWh-d9-Fag"/>
+                        <outlet property="pickerView3" destination="Pku-hj-nEO" id="unw-J3-VVw"/>
+                        <outlet property="textField1" destination="gY5-QM-3Du" id="qDO-N3-zip"/>
+                        <outlet property="textField2" destination="mbd-zH-ZYf" id="8MH-L6-62l"/>
+                        <outlet property="textField3" destination="g7Y-Ej-YgU" id="6HB-lB-nvJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hyW-mg-QWi" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1923.1884057971015" y="26.116071428571427"/>
+        </scene>
+    </scenes>
+</document>
