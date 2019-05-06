@@ -13,128 +13,213 @@
         <!--Cafe Viewing View Controller-->
         <scene sceneID="dGh-ED-G6o">
             <objects>
-                <viewController storyboardIdentifier="CafeViewing" id="c03-0I-dzi" customClass="CafeViewingViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CafeViewing" id="c03-0I-dzi" customClass="CafeViewingViewController" customModule="SpacePrototype1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NL3-vS-T5M">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SOp-UT-lkT">
-                                <rect key="frame" x="16" y="238" width="122" height="98"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="c03-0I-dzi" id="UTk-qP-d2c"/>
-                                    <outlet property="delegate" destination="c03-0I-dzi" id="Xim-VH-kpl"/>
-                                </connections>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Day of the Week and Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQT-b4-Mxn">
-                                <rect key="frame" x="16" y="158.5" width="382" height="20.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Day of the Week and Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQT-b4-Mxn">
+                                <rect key="frame" x="16" y="138.5" width="249" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wtg-rE-BCv">
-                                <rect key="frame" x="162" y="243" width="124" height="88"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="c03-0I-dzi" id="B7w-Pz-4rX"/>
-                                    <outlet property="delegate" destination="c03-0I-dzi" id="zrG-gS-kvg"/>
-                                </connections>
-                            </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pku-hj-nEO">
-                                <rect key="frame" x="286" y="255" width="112" height="65"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="c03-0I-dzi" id="uJM-W3-NVR"/>
-                                    <outlet property="delegate" destination="c03-0I-dzi" id="D2H-iw-NDQ"/>
-                                </connections>
-                            </pickerView>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gY5-QM-3Du">
-                                <rect key="frame" x="16" y="189" width="114" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mbd-zH-ZYf">
-                                <rect key="frame" x="170" y="189" width="108" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g7Y-Ej-YgU">
-                                <rect key="frame" x="306" y="189" width="73" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0S-mI-V8A">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0S-mI-V8A">
                                 <rect key="frame" x="207" y="442" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Uris Cafe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHC-rR-92R">
-                                <rect key="frame" x="16" y="122" width="416" height="20.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uris Cafe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHC-rR-92R">
+                                <rect key="frame" x="16" y="94" width="120.5" height="28.5"/>
+                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3t-Ns-PNr">
-                                <rect key="frame" x="0.0" y="462" width="414" height="400"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Htb-mb-afv">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="414" id="af8-PY-nSG"/>
-                                            <constraint firstAttribute="height" constant="400" id="wlq-eX-qQB"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="du2-1w-Gox">
-                                        <rect key="frame" x="414" y="0.0" width="414" height="400"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="414" id="lpg-UF-c8d"/>
-                                            <constraint firstAttribute="height" constant="400" id="oZJ-dO-q8j"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="kwd-E4-LSn">
+                                <rect key="frame" x="47" y="333.5" width="320" height="95"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="1wX-Lk-Ztn"/>
-                                    <constraint firstAttribute="trailing" secondItem="du2-1w-Gox" secondAttribute="trailing" id="6Rv-Qt-v7k"/>
-                                    <constraint firstItem="Htb-mb-afv" firstAttribute="leading" secondItem="e3t-Ns-PNr" secondAttribute="leading" id="7nU-5I-nk4"/>
-                                    <constraint firstAttribute="bottom" secondItem="Htb-mb-afv" secondAttribute="bottom" id="O9s-r4-GTU"/>
-                                    <constraint firstItem="du2-1w-Gox" firstAttribute="top" secondItem="e3t-Ns-PNr" secondAttribute="top" id="Pnn-UT-ac6"/>
-                                    <constraint firstItem="du2-1w-Gox" firstAttribute="leading" secondItem="Htb-mb-afv" secondAttribute="trailing" id="eqc-Kj-q8A"/>
-                                    <constraint firstAttribute="bottom" secondItem="du2-1w-Gox" secondAttribute="bottom" id="q8n-54-cni"/>
-                                    <constraint firstAttribute="width" constant="414" id="va7-sd-poD"/>
-                                    <constraint firstItem="Htb-mb-afv" firstAttribute="top" secondItem="e3t-Ns-PNr" secondAttribute="top" id="wvg-VE-039"/>
+                                    <constraint firstAttribute="height" constant="95" id="vou-8d-CCq"/>
                                 </constraints>
-                            </scrollView>
+                                <date key="date" timeIntervalSinceReferenceDate="578760183.99281597">
+                                    <!--2019-05-05 14:43:03 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="1167562800">
+                                    <!--2037-12-31 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167620400">
+                                    <!--2038-01-01 03:00:00 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="changedDate:" destination="c03-0I-dzi" eventType="valueChanged" id="k3K-4A-gTE"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capacity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quD-2Y-8Fw">
+                                <rect key="frame" x="16" y="292.5" width="97" height="25"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ebn-Cr-bEg">
+                                <rect key="frame" x="16" y="190" width="268.5" height="70.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="gQv-nt-fUg">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="70.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi" translatesAutoresizingMaskIntoConstraints="NO" id="hRh-Zi-xeG">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="bLj-57-uFN"/>
+                                                    <constraint firstAttribute="height" constant="50" id="ufJ-1P-BL0"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wifi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtQ-mx-stj">
+                                                <rect key="frame" x="11" y="53" width="28.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="btj-SX-z5z">
+                                        <rect key="frame" x="65" y="0.0" width="50" height="70.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outlet" translatesAutoresizingMaskIntoConstraints="NO" id="n4g-Xp-K8y">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="4rN-04-nq3"/>
+                                                    <constraint firstAttribute="width" constant="50" id="COf-sV-4ME"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outlets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdP-Ik-SaA">
+                                                <rect key="frame" x="1" y="53" width="48.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="uap-Ce-hgQ">
+                                        <rect key="frame" x="130" y="0.0" width="50" height="70.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="air-conditioner" translatesAutoresizingMaskIntoConstraints="NO" id="knd-e9-zUR">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="Bz8-eW-0bs"/>
+                                                    <constraint firstAttribute="height" constant="50" id="bJj-pa-aya"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A/C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8J-zx-5mZ">
+                                                <rect key="frame" x="11.5" y="53" width="27" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d7U-9g-mqy">
+                                        <rect key="frame" x="195" y="0.0" width="73.5" height="70.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toilet" translatesAutoresizingMaskIntoConstraints="NO" id="n1N-oL-mX6">
+                                                <rect key="frame" x="12" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Hd0-CF-ni5"/>
+                                                    <constraint firstAttribute="width" constant="50" id="p3R-6X-bRa"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bathrooms" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nw6-UX-6cc">
+                                                <rect key="frame" x="0.0" y="50" width="73.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cbf-Nt-RUu">
+                                <rect key="frame" x="16" y="485.5" width="191" height="191"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cbf-Nt-RUu" secondAttribute="height" id="gZM-0q-8lL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are currently 34 people at Uris Deli.                  It is 75% full, elative to the maximum occupancy." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26R-O7-D9n">
+                                <rect key="frame" x="16" y="692.5" width="382" height="39"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cam View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqa-dc-5nC">
+                                <rect key="frame" x="16" y="444.5" width="113" height="25"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kcw-P9-qXy" customClass="PieChart" customModule="PieCharts">
+                                <rect key="frame" x="223" y="501.5" width="175" height="159"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="outerRadius">
+                                        <real key="value" value="70"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="innerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="referenceAngle">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedOffset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animDuration">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="E0S-mI-V8A" firstAttribute="centerX" secondItem="YDT-WE-rZS" secondAttribute="centerX" id="1iI-W9-qcG"/>
-                            <constraint firstItem="YDT-WE-rZS" firstAttribute="trailing" secondItem="e3t-Ns-PNr" secondAttribute="trailing" id="dD5-4Z-Ofq"/>
-                            <constraint firstItem="e3t-Ns-PNr" firstAttribute="top" secondItem="E0S-mI-V8A" secondAttribute="bottom" constant="20" id="e4X-ye-YJI"/>
-                            <constraint firstItem="e3t-Ns-PNr" firstAttribute="leading" secondItem="YDT-WE-rZS" secondAttribute="leading" id="gIg-ia-zCj"/>
-                            <constraint firstItem="YDT-WE-rZS" firstAttribute="bottom" secondItem="e3t-Ns-PNr" secondAttribute="bottom" id="zA4-s4-B1E"/>
+                            <constraint firstItem="Gqa-dc-5nC" firstAttribute="top" secondItem="kwd-E4-LSn" secondAttribute="bottom" constant="16" id="4CU-1e-hvN"/>
+                            <constraint firstItem="Kcw-P9-qXy" firstAttribute="height" secondItem="cbf-Nt-RUu" secondAttribute="height" constant="-32" id="6nB-TJ-Qj2"/>
+                            <constraint firstItem="kwd-E4-LSn" firstAttribute="top" secondItem="quD-2Y-8Fw" secondAttribute="bottom" constant="16" id="Aoo-0J-imR"/>
+                            <constraint firstAttribute="trailing" secondItem="26R-O7-D9n" secondAttribute="trailing" constant="16" id="By3-v5-Gb1"/>
+                            <constraint firstItem="kHC-rR-92R" firstAttribute="leading" secondItem="YDT-WE-rZS" secondAttribute="leading" constant="16" id="Dgj-BX-dph"/>
+                            <constraint firstItem="cQT-b4-Mxn" firstAttribute="top" secondItem="kHC-rR-92R" secondAttribute="bottom" constant="16" id="F46-UG-Sag"/>
+                            <constraint firstItem="cQT-b4-Mxn" firstAttribute="leading" secondItem="YDT-WE-rZS" secondAttribute="leading" constant="16" id="Jdb-Sr-sGp"/>
+                            <constraint firstItem="kHC-rR-92R" firstAttribute="top" secondItem="YDT-WE-rZS" secondAttribute="top" constant="50" id="Ko8-ip-SKr"/>
+                            <constraint firstItem="kwd-E4-LSn" firstAttribute="centerX" secondItem="YDT-WE-rZS" secondAttribute="centerX" id="LBY-bf-e3a"/>
+                            <constraint firstItem="ebn-Cr-bEg" firstAttribute="top" secondItem="cQT-b4-Mxn" secondAttribute="bottom" constant="32" id="O8t-Sl-STV"/>
+                            <constraint firstItem="cbf-Nt-RUu" firstAttribute="leading" secondItem="YDT-WE-rZS" secondAttribute="leading" constant="16" id="OfQ-tC-aFi"/>
+                            <constraint firstItem="Gqa-dc-5nC" firstAttribute="leading" secondItem="YDT-WE-rZS" secondAttribute="leading" constant="16" id="VqJ-TP-L05"/>
+                            <constraint firstItem="Kcw-P9-qXy" firstAttribute="leading" secondItem="cbf-Nt-RUu" secondAttribute="trailing" constant="16" id="YCw-UW-n1r"/>
+                            <constraint firstItem="quD-2Y-8Fw" firstAttribute="leading" secondItem="YDT-WE-rZS" secondAttribute="leading" constant="16" id="ZD7-SF-mGB"/>
+                            <constraint firstItem="cbf-Nt-RUu" firstAttribute="width" secondItem="NL3-vS-T5M" secondAttribute="width" multiplier="0.5" constant="-16" id="eCj-Fh-Pyn"/>
+                            <constraint firstItem="26R-O7-D9n" firstAttribute="leading" secondItem="YDT-WE-rZS" secondAttribute="leading" constant="16" id="fVW-G5-IPP"/>
+                            <constraint firstItem="Kcw-P9-qXy" firstAttribute="centerY" secondItem="cbf-Nt-RUu" secondAttribute="centerY" id="oms-wm-SJo"/>
+                            <constraint firstItem="quD-2Y-8Fw" firstAttribute="top" secondItem="ebn-Cr-bEg" secondAttribute="bottom" constant="32" id="qpT-l2-VFM"/>
+                            <constraint firstItem="26R-O7-D9n" firstAttribute="top" secondItem="cbf-Nt-RUu" secondAttribute="bottom" constant="16" id="vY3-HW-kwy"/>
+                            <constraint firstItem="ebn-Cr-bEg" firstAttribute="leading" secondItem="YDT-WE-rZS" secondAttribute="leading" constant="16" id="vn4-56-gLc"/>
+                            <constraint firstItem="cbf-Nt-RUu" firstAttribute="top" secondItem="Gqa-dc-5nC" secondAttribute="bottom" constant="16" id="xgv-Z2-y32"/>
+                            <constraint firstItem="YDT-WE-rZS" firstAttribute="trailing" secondItem="Kcw-P9-qXy" secondAttribute="trailing" constant="16" id="yEh-vr-OXB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YDT-WE-rZS"/>
                     </view>
                     <navigationItem key="navigationItem" id="I3x-hw-xbR"/>
                     <connections>
+                        <outlet property="ACIconView" destination="uap-Ce-hgQ" id="OYZ-PN-22T"/>
+                        <outlet property="bathroomsIconView" destination="d7U-9g-mqy" id="0p1-u1-vqU"/>
+                        <outlet property="bioLabel" destination="cQT-b4-Mxn" id="GYF-yT-toq"/>
+                        <outlet property="cafeImageView" destination="cbf-Nt-RUu" id="CE3-C3-HEK"/>
+                        <outlet property="cafeTitleLabel" destination="kHC-rR-92R" id="Ka8-80-XYa"/>
                         <outlet property="capacityLabel" destination="E0S-mI-V8A" id="ojf-Ya-tw4"/>
-                        <outlet property="image1" destination="Htb-mb-afv" id="Sgy-Fd-Wck"/>
-                        <outlet property="image2" destination="du2-1w-Gox" id="FOA-KB-nTt"/>
-                        <outlet property="pickerView1" destination="SOp-UT-lkT" id="QKG-CO-0gG"/>
-                        <outlet property="pickerView2" destination="wtg-rE-BCv" id="kWh-d9-Fag"/>
-                        <outlet property="pickerView3" destination="Pku-hj-nEO" id="unw-J3-VVw"/>
-                        <outlet property="textField1" destination="gY5-QM-3Du" id="qDO-N3-zip"/>
-                        <outlet property="textField2" destination="mbd-zH-ZYf" id="8MH-L6-62l"/>
-                        <outlet property="textField3" destination="g7Y-Ej-YgU" id="6HB-lB-nvJ"/>
+                        <outlet property="capacityPieChart" destination="Kcw-P9-qXy" id="FES-ii-I4E"/>
+                        <outlet property="outletsIconView" destination="btj-SX-z5z" id="RBU-nc-V6o"/>
+                        <outlet property="timePickerView" destination="kwd-E4-LSn" id="KBH-zo-LB6"/>
+                        <outlet property="wifiIconView" destination="gQv-nt-fUg" id="a2d-rR-X0q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hyW-mg-QWi" sceneMemberID="firstResponder"/>
@@ -142,4 +227,10 @@
             <point key="canvasLocation" x="1923.1884057971015" y="26.116071428571427"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="air-conditioner" width="512" height="512"/>
+        <image name="outlet" width="512" height="512"/>
+        <image name="toilet" width="512" height="512"/>
+        <image name="wifi" width="512" height="512"/>
+    </resources>
 </document>

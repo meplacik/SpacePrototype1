@@ -7,41 +7,47 @@
 //
 
 import UIKit
+import PieCharts
 
-class CafeViewingViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class CafeViewingViewController: UIViewController{
+ 
     
     var cafe: Cafe!{
         didSet{
-            setUpView()
+        //    setUpView()
         }
     }
-
-    @IBOutlet weak var textField1: UITextField!
-    @IBOutlet weak var textField2: UITextField!
-    @IBOutlet weak var textField3: UITextField!
     
-    @IBOutlet weak var pickerView1: UIPickerView!
-    @IBOutlet weak var pickerView2: UIPickerView!
-    @IBOutlet weak var pickerView3: UIPickerView!
+    
+    @IBOutlet weak var cafeTitleLabel: UILabel!
+    @IBOutlet weak var bioLabel: UILabel!
+    
+    //Amenities
+    @IBOutlet weak var wifiIconView: UIStackView!
+    @IBOutlet weak var outletsIconView: UIStackView!
+    @IBOutlet weak var ACIconView: UIStackView!
+    @IBOutlet weak var bathroomsIconView: UIStackView!
+    
+    @IBOutlet weak var timePickerView: UIDatePicker!
+
+    
+    
+    @IBOutlet weak var cafeImageView: UIImageView!
+    
+    @IBOutlet weak var capacityPieChart: PieChart!
+    
+    
     
     @IBOutlet weak var capacityLabel: UILabel!
     
     
-    @IBOutlet weak var image1: UIImageView!
-    @IBOutlet weak var image2: UIImageView!
     
-    let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-    let hours = ["12:00","1:00","2:00","3:00","4:00","5:00","6:00","7:00","8:00","9:00","10:00","11:00"]
-    let am_pm = ["AM","PM"]
     
-    func setUpView(){
-        
-    }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
+    /*
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if (pickerView == pickerView1){
             let titleRow = days[row].substring(3)
@@ -70,28 +76,31 @@ class CafeViewingViewController: UIViewController, UIPickerViewDataSource, UIPic
         }
         return 0
     }
+    */
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if(pickerView == pickerView1){
-            textField1.text = days[row]
-        }
-        else if(pickerView == pickerView2){
-            textField2.text = hours[row]
-        }
-        else if(pickerView == pickerView3){
-            textField3.text = am_pm[row]
-        }
-        setImages()
+    @IBAction func changedDate(_ sender: UIDatePicker) {
+        updateCapacity()
     }
+    
+   
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        image1.layer.masksToBounds = true
-        image2.layer.masksToBounds = true
+        setUpView()
+        //image1.layer.masksToBounds = true
+       // image2.layer.masksToBounds = true
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
+    func setUpView(){
+       wifiIconView.isHidden = !cafe.amenities.contains(.wifi)
+       outletsIconView.isHidden = !cafe.amenities.contains(.outlets)
+       ACIconView.isHidden = !cafe.amenities.contains(.airConditioning)
+       bathroomsIconView.isHidden = !cafe.amenities.contains(.bathrooms)
+       updateCapacity()
+    }
+/*
     let timeLapseImages:[Capacity] = [Capacity(rawImage: UIImage(named: "cafe-1.jpg")!, detectedImage: UIImage(named: "cafe1-results.jpg")!, capacity: 35, occupants: 30),
                                       Capacity(rawImage: UIImage(named: "cafe-2.jpg")!, detectedImage: UIImage(named: "cafe2-results.jpg")!, capacity: 35, occupants: 23),
                                       Capacity(rawImage: UIImage(named: "cafe-3.jpg")!, detectedImage: UIImage(named: "cafe3-results.jpg")!, capacity: 35, occupants: 26),
@@ -104,19 +113,46 @@ class CafeViewingViewController: UIViewController, UIPickerViewDataSource, UIPic
     let idealImage1 = [Capacity(rawImage: UIImage(named: "cafe-1-ideal.jpg")!, detectedImage: UIImage(named: "cafe-1-results-ideal.jpg")!, capacity: 30, occupants: 24)]
     let idealImage2 = [Capacity(rawImage: UIImage(named: "cafe-2-ideal.jpg")!, detectedImage: UIImage(named: "cafe-2-results-ideal.jpg")!, capacity: 12, occupants: 9)]
     var currentLapse = 0
-    func setImages(){
-        var pmOffset = 0
-        if pickerView3.selectedRow(inComponent: 0) == 1{
-            pmOffset += 1
+    */
+    
+    let occupiedColor = UIColor.red
+    let openColor = UIColor.green
+    func updateCapacity(){
+        let capacity = cafe.getCapacity(at: timePickerView.date)
+        let textLayerSettings = PiePlainTextLayerSettings()
+        textLayerSettings.viewRadius = 55
+        textLayerSettings.hideOnOverflow = true
+        textLayerSettings.label.font = UIFont.systemFont(ofSize: 8)
+        
+        let formatter = NumberFormatter()
+        formatter.maximumFractionDigits = 1
+        textLayerSettings.label.textGenerator = {slice in
+            if slice.data.model.color == self.openColor{
+                return formatter.string(from: slice.data.model.value as NSNumber).map{"\($0) Open"} ?? ""
+            }else{
+                return formatter.string(from: slice.data.model.value as NSNumber).map{"\($0) Occupied"} ?? ""
+            }
         }
+    
         
-        let images = Data.getImage(for: cafe, weekDay: pickerView1.selectedRow(inComponent: 0), time: pickerView2.selectedRow(inComponent: 0) + pmOffset)
-       
-        let capaity = images[currentLapse]
-        image1.image = capaity.rawImage
-        image2.image = capaity.detectedImage
+        let textLayer = PiePlainTextLayer()
+        textLayer.settings = textLayerSettings
+        capacityPieChart.layers = [textLayer]
+        capacityPieChart.models = [PieSliceModel(value: 10, color: occupiedColor), PieSliceModel(value: Double(capacity.capacity - capacity.occupants), color: openColor)]
+        /*
+        capacityPieChart.removeSlices()
+        capacityPieChart.insertSlice(index: 0, model:  PieSliceModel(value: 10, color: UIColor.red))
+        capacityPieChart.insertSlice(index: 1, model:  PieSliceModel(value: Double(capacity.capacity - capacity.occupants), color: UIColor.green))
+ */
+      //  print("TIME: \(hour) : \(minute)")
+       // capacityLabel.text = "TIME: \(hour) : \(minute)"
+        /*
         
-        capacityLabel.text = "\(names[ViewController.iteration % 2]) is \(capaity.capacityPercentage())% full. "
+        image1.image = capacity.rawImage
+        image2.image = capacity.detectedImage
+        
+        capacityLabel.text = "\(cafe.name) is \(capacity.capacityPercentage())% full. "
+ */
     }
 
 

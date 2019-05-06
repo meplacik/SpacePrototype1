@@ -13,6 +13,7 @@ class Cafe {
     //MARK: Properties
     
     var name: String
+    var description: String
     var photo: UIImage?
     let numberOfSeats: Int
     var amenities: [Amenity]
@@ -20,13 +21,14 @@ class Cafe {
     
     //MARK: Initialization
     
-    init?(name: String, photo: UIImage?,numberOfSeats: Int, amenities: [Amenity], price: Price) {
+    init?(name: String, description: String, photo: UIImage?,numberOfSeats: Int, amenities: [Amenity], price: Price) {
         // Initialization should fail if there is no name or if the rating is negative.
         if name.isEmpty {
             return nil
         }
         // Initialize stored properties.
         self.name = name
+        self.description = description
         self.photo = photo
         self.numberOfSeats = numberOfSeats
         self.amenities = amenities
@@ -35,5 +37,20 @@ class Cafe {
     
     func contains(_ string: String) -> Bool{
         return name.contains(string)
+    }
+    
+    
+    func getCapacity(at date: Date) -> Capacity{
+        let calendar = Calendar.current
+        let comp = calendar.dateComponents([.hour, .minute], from: date)
+        let hour = comp.hour ?? 0
+        let minute = comp.minute ?? 0
+        
+        let cafeCode = self.name.replacingOccurrences(of: " ", with: "_")
+        let occupants = Data.capacityData(for: "\(cafeCode)-\(hour)-\(minute)")
+        
+         return Capacity(rawImage: UIImage(named: "Uris_Cafe-0-0")!, detectedImage: UIImage(named: "Uris_Cafe-0-0-edited")!, capacity: self.numberOfSeats, occupants: occupants)
+    
+        //return Capacity(rawImage: UIImage(named: "\(cafeCode)-\(hour)-\(minute)")!, detectedImage: UIImage(named: "\(cafeCode)-\(hour)-\(minute)-edited")!, capacity: self.numberOfSeats, occupants: occupants)
     }
 }

@@ -13,4 +13,5 @@ enum Amenity{
     case outlets
     case wifi
     case airConditioning
+    case bathrooms
 }
