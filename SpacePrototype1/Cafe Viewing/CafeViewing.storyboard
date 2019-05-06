@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Cafe Viewing View Controller-->
         <scene sceneID="dGh-ED-G6o">
@@ -18,12 +26,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Day of the Week and Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQT-b4-Mxn">
-                                <rect key="frame" x="16" y="138.5" width="249" height="19.5"/>
-                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0S-mI-V8A">
                                 <rect key="frame" x="207" y="442" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -31,13 +33,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uris Cafe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHC-rR-92R">
-                                <rect key="frame" x="16" y="94" width="120.5" height="28.5"/>
-                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="25"/>
+                                <rect key="frame" x="16" y="94" width="120.5" height="37"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="kwd-E4-LSn">
-                                <rect key="frame" x="47" y="333.5" width="320" height="95"/>
+                                <rect key="frame" x="47" y="307.5" width="320" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="vou-8d-CCq"/>
                                 </constraints>
@@ -54,14 +56,14 @@
                                     <action selector="changedDate:" destination="c03-0I-dzi" eventType="valueChanged" id="k3K-4A-gTE"/>
                                 </connections>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capacity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quD-2Y-8Fw">
-                                <rect key="frame" x="16" y="292.5" width="97" height="25"/>
-                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check Capacity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quD-2Y-8Fw">
+                                <rect key="frame" x="16" y="265.5" width="156.5" height="26"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ebn-Cr-bEg">
-                                <rect key="frame" x="16" y="190" width="268.5" height="70.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="ebn-Cr-bEg">
+                                <rect key="frame" x="20" y="162" width="365" height="70.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="gQv-nt-fUg">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="70.5"/>
@@ -74,15 +76,15 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wifi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtQ-mx-stj">
-                                                <rect key="frame" x="11" y="53" width="28.5" height="17.5"/>
-                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
+                                                <rect key="frame" x="12.5" y="53" width="25" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="btj-SX-z5z">
-                                        <rect key="frame" x="65" y="0.0" width="50" height="70.5"/>
+                                        <rect key="frame" x="97" y="0.0" width="50" height="70.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="outlet" translatesAutoresizingMaskIntoConstraints="NO" id="n4g-Xp-K8y">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -93,14 +95,14 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outlets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdP-Ik-SaA">
                                                 <rect key="frame" x="1" y="53" width="48.5" height="17.5"/>
-                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="uap-Ce-hgQ">
-                                        <rect key="frame" x="130" y="0.0" width="50" height="70.5"/>
+                                        <rect key="frame" x="194" y="0.0" width="50" height="70.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="air-conditioner" translatesAutoresizingMaskIntoConstraints="NO" id="knd-e9-zUR">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -110,15 +112,15 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A/C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8J-zx-5mZ">
-                                                <rect key="frame" x="11.5" y="53" width="27" height="17.5"/>
-                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
+                                                <rect key="frame" x="12" y="53" width="26" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d7U-9g-mqy">
-                                        <rect key="frame" x="195" y="0.0" width="73.5" height="70.5"/>
+                                        <rect key="frame" x="291" y="0.0" width="74" height="70.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toilet" translatesAutoresizingMaskIntoConstraints="NO" id="n1N-oL-mX6">
                                                 <rect key="frame" x="12" y="0.0" width="50" height="50"/>
@@ -128,8 +130,8 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bathrooms" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nw6-UX-6cc">
-                                                <rect key="frame" x="0.0" y="50" width="73.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="15"/>
+                                                <rect key="frame" x="0.0" y="50" width="74" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -137,26 +139,20 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cbf-Nt-RUu">
-                                <rect key="frame" x="16" y="485.5" width="191" height="191"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cbf-Nt-RUu">
+                                <rect key="frame" x="16" y="520" width="191" height="191"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cbf-Nt-RUu" secondAttribute="height" id="gZM-0q-8lL"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There are currently 34 people at Uris Deli.                  It is 75% full, elative to the maximum occupancy." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26R-O7-D9n">
-                                <rect key="frame" x="16" y="692.5" width="382" height="39"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cam View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqa-dc-5nC">
-                                <rect key="frame" x="16" y="444.5" width="113" height="25"/>
-                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="22"/>
+                                <rect key="frame" x="16" y="418.5" width="99" height="26"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kcw-P9-qXy" customClass="PieChart" customModule="PieCharts">
-                                <rect key="frame" x="223" y="501.5" width="175" height="159"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kcw-P9-qXy" customClass="PieChart" customModule="PieCharts">
+                                <rect key="frame" x="223" y="536" width="175" height="159"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="outerRadius">
@@ -179,40 +175,81 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xw1-0u-zat">
+                                <rect key="frame" x="0.0" y="40" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="hFp-Fo-JAv"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How accurate was this prediction?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1q8-Ho-D3B">
+                                <rect key="frame" x="72" y="743" width="260" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="FE7-Ny-8FP">
+                                <rect key="frame" x="124" y="782" width="161" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORB-jL-UgA">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="jyU-2M-HUY"/>
+                                            <constraint firstAttribute="width" constant="60" id="n8N-AT-y6R"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="like"/>
+                                        <state key="selected" image="like_selected"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggt-XD-QWk">
+                                        <rect key="frame" x="101" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="cqh-wd-Mq3"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button" image="dislike"/>
+                                        <state key="selected" image="dislike_selected"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="There are currently 34 people at Uris Deli.                  It is 75% full, elative to the maximum occupancy." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26R-O7-D9n">
+                                <rect key="frame" x="16" y="453" width="382" height="40"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ebn-Cr-bEg" firstAttribute="leading" secondItem="NL3-vS-T5M" secondAttribute="leadingMargin" id="14s-0e-EYK"/>
                             <constraint firstItem="E0S-mI-V8A" firstAttribute="centerX" secondItem="YDT-WE-rZS" secondAttribute="centerX" id="1iI-W9-qcG"/>
+                            <constraint firstItem="kHC-rR-92R" firstAttribute="top" secondItem="xw1-0u-zat" secondAttribute="bottom" constant="10" id="2ag-Vk-sBd"/>
                             <constraint firstItem="Gqa-dc-5nC" firstAttribute="top" secondItem="kwd-E4-LSn" secondAttribute="bottom" constant="16" id="4CU-1e-hvN"/>
                             <constraint firstItem="Kcw-P9-qXy" firstAttribute="height" secondItem="cbf-Nt-RUu" secondAttribute="height" constant="-32" id="6nB-TJ-Qj2"/>
                             <constraint firstItem="kwd-E4-LSn" firstAttribute="top" secondItem="quD-2Y-8Fw" secondAttribute="bottom" constant="16" id="Aoo-0J-imR"/>
                             <constraint firstAttribute="trailing" secondItem="26R-O7-D9n" secondAttribute="trailing" constant="16" id="By3-v5-Gb1"/>
                             <constraint firstItem="kHC-rR-92R" firstAttribute="leading" secondItem="YDT-WE-rZS" secondAttribute="leading" constant="16" id="Dgj-BX-dph"/>
-                            <constraint firstItem="cQT-b4-Mxn" firstAttribute="top" secondItem="kHC-rR-92R" secondAttribute="bottom" constant="16" id="F46-UG-Sag"/>
-                            <constraint firstItem="cQT-b4-Mxn" firstAttribute="leading" secondItem="YDT-WE-rZS" secondAttribute="leading" constant="16" id="Jdb-Sr-sGp"/>
+                            <constraint firstItem="ebn-Cr-bEg" firstAttribute="top" secondItem="kHC-rR-92R" secondAttribute="bottom" constant="31" id="II2-yN-16d"/>
                             <constraint firstItem="kHC-rR-92R" firstAttribute="top" secondItem="YDT-WE-rZS" secondAttribute="top" constant="50" id="Ko8-ip-SKr"/>
                             <constraint firstItem="kwd-E4-LSn" firstAttribute="centerX" secondItem="YDT-WE-rZS" secondAttribute="centerX" id="LBY-bf-e3a"/>
-                            <constraint firstItem="ebn-Cr-bEg" firstAttribute="top" secondItem="cQT-b4-Mxn" secondAttribute="bottom" constant="32" id="O8t-Sl-STV"/>
                             <constraint firstItem="cbf-Nt-RUu" firstAttribute="leading" secondItem="YDT-WE-rZS" secondAttribute="leading" constant="16" id="OfQ-tC-aFi"/>
+                            <constraint firstItem="ebn-Cr-bEg" firstAttribute="top" secondItem="NL3-vS-T5M" secondAttribute="top" constant="162" id="S62-sh-WaK"/>
                             <constraint firstItem="Gqa-dc-5nC" firstAttribute="leading" secondItem="YDT-WE-rZS" secondAttribute="leading" constant="16" id="VqJ-TP-L05"/>
+                            <constraint firstItem="quD-2Y-8Fw" firstAttribute="top" secondItem="ebn-Cr-bEg" secondAttribute="bottom" constant="33" id="Y7x-EZ-pmP"/>
                             <constraint firstItem="Kcw-P9-qXy" firstAttribute="leading" secondItem="cbf-Nt-RUu" secondAttribute="trailing" constant="16" id="YCw-UW-n1r"/>
                             <constraint firstItem="quD-2Y-8Fw" firstAttribute="leading" secondItem="YDT-WE-rZS" secondAttribute="leading" constant="16" id="ZD7-SF-mGB"/>
                             <constraint firstItem="cbf-Nt-RUu" firstAttribute="width" secondItem="NL3-vS-T5M" secondAttribute="width" multiplier="0.5" constant="-16" id="eCj-Fh-Pyn"/>
                             <constraint firstItem="26R-O7-D9n" firstAttribute="leading" secondItem="YDT-WE-rZS" secondAttribute="leading" constant="16" id="fVW-G5-IPP"/>
                             <constraint firstItem="Kcw-P9-qXy" firstAttribute="centerY" secondItem="cbf-Nt-RUu" secondAttribute="centerY" id="oms-wm-SJo"/>
-                            <constraint firstItem="quD-2Y-8Fw" firstAttribute="top" secondItem="ebn-Cr-bEg" secondAttribute="bottom" constant="32" id="qpT-l2-VFM"/>
                             <constraint firstItem="26R-O7-D9n" firstAttribute="top" secondItem="cbf-Nt-RUu" secondAttribute="bottom" constant="16" id="vY3-HW-kwy"/>
-                            <constraint firstItem="ebn-Cr-bEg" firstAttribute="leading" secondItem="YDT-WE-rZS" secondAttribute="leading" constant="16" id="vn4-56-gLc"/>
                             <constraint firstItem="cbf-Nt-RUu" firstAttribute="top" secondItem="Gqa-dc-5nC" secondAttribute="bottom" constant="16" id="xgv-Z2-y32"/>
                             <constraint firstItem="YDT-WE-rZS" firstAttribute="trailing" secondItem="Kcw-P9-qXy" secondAttribute="trailing" constant="16" id="yEh-vr-OXB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YDT-WE-rZS"/>
                     </view>
-                    <navigationItem key="navigationItem" id="I3x-hw-xbR"/>
                     <connections>
                         <outlet property="ACIconView" destination="uap-Ce-hgQ" id="OYZ-PN-22T"/>
                         <outlet property="bathroomsIconView" destination="d7U-9g-mqy" id="0p1-u1-vqU"/>
-                        <outlet property="bioLabel" destination="cQT-b4-Mxn" id="GYF-yT-toq"/>
                         <outlet property="cafeImageView" destination="cbf-Nt-RUu" id="CE3-C3-HEK"/>
                         <outlet property="cafeTitleLabel" destination="kHC-rR-92R" id="Ka8-80-XYa"/>
                         <outlet property="capacityLabel" destination="E0S-mI-V8A" id="ojf-Ya-tw4"/>
@@ -229,6 +266,10 @@
     </scenes>
     <resources>
         <image name="air-conditioner" width="512" height="512"/>
+        <image name="dislike" width="512" height="512"/>
+        <image name="dislike_selected" width="1600" height="1601"/>
+        <image name="like" width="512" height="512"/>
+        <image name="like_selected" width="1600" height="1601"/>
         <image name="outlet" width="512" height="512"/>
         <image name="toilet" width="512" height="512"/>
         <image name="wifi" width="512" height="512"/>

@@ -21,10 +21,17 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blurred background" translatesAutoresizingMaskIntoConstraints="NO" id="ACz-7d-dn1">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Space" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzD-5k-eYC">
-                                <rect key="frame" x="100.5" y="124.5" width="213.5" height="113.5"/>
-                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="90"/>
-                                <color key="textColor" red="0.99260598421096802" green="0.51660096645355225" blue="0.15167844295501709" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzD-5k-eYC">
+                                <rect key="frame" x="110" y="298" width="195" height="190"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="space">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99260598421096802" green="0.51660096645355225" blue="0.15167844295501709" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="67" name="Pacifico-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -46,6 +53,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="blurred background" width="4000" height="6000"/>
+        <image name="blurred background" width="449" height="638"/>
     </resources>
 </document>
