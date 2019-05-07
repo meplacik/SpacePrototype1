@@ -18,28 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blurred background" translatesAutoresizingMaskIntoConstraints="NO" id="ACz-7d-dn1">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzD-5k-eYC">
-                                <rect key="frame" x="110" y="298" width="195" height="190"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="space">
-                                        <attributes>
-                                            <color key="NSColor" red="0.99260598421096802" green="0.51660096645355225" blue="0.15167844295501709" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="67" name="Pacifico-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIb-CJ-Q4m">
+                                <rect key="frame" x="186" y="437" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_image" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ACz-7d-dn1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="CzD-5k-eYC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9Lb-gP-5yg"/>
                             <constraint firstItem="ACz-7d-dn1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KQw-av-7Jo"/>
-                            <constraint firstItem="CzD-5k-eYC" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.4" id="Oqy-ap-a5t"/>
                             <constraint firstAttribute="bottom" secondItem="ACz-7d-dn1" secondAttribute="bottom" id="TmN-UI-N2B"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ACz-7d-dn1" secondAttribute="trailing" id="uUE-DC-St7"/>
                             <constraint firstItem="ACz-7d-dn1" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="wOx-2N-Hka"/>
@@ -53,6 +45,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="blurred background" width="449" height="638"/>
+        <image name="launch_image" width="1872" height="2659"/>
     </resources>
 </document>

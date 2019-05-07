@@ -17,8 +17,6 @@
 		04AEB186227E06AD0085B063 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEB185227E06AD0085B063 /* Data.swift */; };
 		3A3765A72280B2450005D688 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A690A99226402C1002E5B91 /* Assets.xcassets */; };
 		3A3765A82280B2450005D688 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A690A99226402C1002E5B91 /* Assets.xcassets */; };
-		3A3765A92280B24E0005D688 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A690A9B226402C1002E5B91 /* LaunchScreen.storyboard */; };
-		3A3765AA2280B24F0005D688 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A690A9B226402C1002E5B91 /* LaunchScreen.storyboard */; };
 		3A3765D02280D6270005D688 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A3765CF2280D6270005D688 /* Roboto-Bold.ttf */; };
 		3A3765D12280D6270005D688 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A3765CF2280D6270005D688 /* Roboto-Bold.ttf */; };
 		3A3765D22280D6270005D688 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A3765CF2280D6270005D688 /* Roboto-Bold.ttf */; };
@@ -32,10 +30,8 @@
 		3A690A95226402C0002E5B91 /* CafeViewingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A690A94226402C0002E5B91 /* CafeViewingViewController.swift */; };
 		3A690A98226402C0002E5B91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A690A96226402C0002E5B91 /* Main.storyboard */; };
 		3A690A9A226402C1002E5B91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A690A99226402C1002E5B91 /* Assets.xcassets */; };
-		3A690A9D226402C1002E5B91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A690A9B226402C1002E5B91 /* LaunchScreen.storyboard */; };
 		3A690AA8226402C1002E5B91 /* SpacePrototype1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A690AA7226402C1002E5B91 /* SpacePrototype1Tests.swift */; };
 		3A690AB3226402C1002E5B91 /* SpacePrototype1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A690AB2226402C1002E5B91 /* SpacePrototype1UITests.swift */; };
-		3A690AC1226411CE002E5B91 /* img1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A690AC0226411CE002E5B91 /* img1.png */; };
 		3A690AC322641269002E5B91 /* SpaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A690AC222641269002E5B91 /* SpaceTableViewCell.swift */; };
 		3A690AC922641B1E002E5B91 /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A690AC822641B1E002E5B91 /* Cafe.swift */; };
 		861BD6CDD6F7069A99CA20F8 /* Pods_SpacePrototype1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A13884E1777E5F699D87C7AC /* Pods_SpacePrototype1Tests.framework */; };
@@ -80,7 +76,6 @@
 		3A690A94226402C0002E5B91 /* CafeViewingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeViewingViewController.swift; sourceTree = "<group>"; };
 		3A690A97226402C0002E5B91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A690A99226402C1002E5B91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3A690A9C226402C1002E5B91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A690A9E226402C1002E5B91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A690AA3226402C1002E5B91 /* SpacePrototype1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpacePrototype1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A690AA7226402C1002E5B91 /* SpacePrototype1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacePrototype1Tests.swift; sourceTree = "<group>"; };
@@ -88,7 +83,6 @@
 		3A690AAE226402C1002E5B91 /* SpacePrototype1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpacePrototype1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A690AB2226402C1002E5B91 /* SpacePrototype1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacePrototype1UITests.swift; sourceTree = "<group>"; };
 		3A690AB4226402C1002E5B91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A690AC0226411CE002E5B91 /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img1.png; path = ../Desktop/img1.png; sourceTree = "<group>"; };
 		3A690AC222641269002E5B91 /* SpaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceTableViewCell.swift; sourceTree = "<group>"; };
 		3A690AC822641B1E002E5B91 /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
 		7C562B439FA885EE5C2BC76B /* Pods-SpacePrototype1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpacePrototype1.debug.xcconfig"; path = "Target Support Files/Pods-SpacePrototype1/Pods-SpacePrototype1.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,7 +174,6 @@
 				3A690AA6226402C1002E5B91 /* SpacePrototype1Tests */,
 				3A690AB1226402C1002E5B91 /* SpacePrototype1UITests */,
 				3A690A90226402C0002E5B91 /* Products */,
-				3A690AC0226411CE002E5B91 /* img1.png */,
 				6CBA2D04F8E9EB71F0B64C29 /* Pods */,
 				404D1568DC558865A93F8D38 /* Frameworks */,
 			);
@@ -210,7 +203,6 @@
 				04AEB187227E06B30085B063 /* Data */,
 				041001F12264F82E00A47E51 /* Extensions */,
 				3A690A99226402C1002E5B91 /* Assets.xcassets */,
-				3A690A9B226402C1002E5B91 /* LaunchScreen.storyboard */,
 				3A690A9E226402C1002E5B91 /* Info.plist */,
 			);
 			path = SpacePrototype1;
@@ -366,9 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04AEB182227E05650085B063 /* CafeList.storyboard in Resources */,
-				3A690A9D226402C1002E5B91 /* LaunchScreen.storyboard in Resources */,
 				3A3765D42280D6310005D688 /* Roboto-Regular.ttf in Resources */,
-				3A690AC1226411CE002E5B91 /* img1.png in Resources */,
 				3A690A9A226402C1002E5B91 /* Assets.xcassets in Resources */,
 				3A3765D02280D6270005D688 /* Roboto-Bold.ttf in Resources */,
 				3A690A98226402C0002E5B91 /* Main.storyboard in Resources */,
@@ -382,7 +372,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A3765D52280D6310005D688 /* Roboto-Regular.ttf in Resources */,
-				3A3765A92280B24E0005D688 /* LaunchScreen.storyboard in Resources */,
 				3A3765D92280D63C0005D688 /* Pacifico-Regular.ttf in Resources */,
 				3A3765D12280D6270005D688 /* Roboto-Bold.ttf in Resources */,
 				3A3765A72280B2450005D688 /* Assets.xcassets in Resources */,
@@ -394,7 +383,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A3765D62280D6310005D688 /* Roboto-Regular.ttf in Resources */,
-				3A3765AA2280B24F0005D688 /* LaunchScreen.storyboard in Resources */,
 				3A3765DA2280D63C0005D688 /* Pacifico-Regular.ttf in Resources */,
 				3A3765D22280D6270005D688 /* Roboto-Bold.ttf in Resources */,
 				3A3765A82280B2450005D688 /* Assets.xcassets in Resources */,
@@ -550,14 +538,6 @@
 				3A690A97226402C0002E5B91 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3A690A9B226402C1002E5B91 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A690A9C226402C1002E5B91 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

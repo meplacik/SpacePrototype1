@@ -41,12 +41,19 @@ class CafeViewingViewController: UIViewController{
     
     @IBOutlet weak var capacityLabel: UILabel!
 
+    @IBOutlet weak var disabledUp: UIButton!
+    @IBOutlet weak var disabledDown: UIButton!
+    
     @IBAction func thumbsUp(_ sender: UIButton) {
         sender.isSelected = true
+        disabledDown.isEnabled = false
     }
     @IBAction func thumbsDown(_ sender: UIButton) {
         sender.isSelected = true
+        disabledUp.isEnabled = false
     }
+
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }

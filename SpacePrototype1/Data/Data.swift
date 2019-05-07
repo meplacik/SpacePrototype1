@@ -18,7 +18,7 @@ class Data{
         let photo3 = UIImage(named: "Office Cafe")
         let photo4 = UIImage(named: "Board Game Cafe")
         
-        guard let space1 = Cafe(name: "Coffee Cafe", description: "A busy cafe known for their espresso.", photo: photo1, numberOfSeats: 20, amenities: [.wifi, .outlets], price: .low) else {
+        guard let space1 = Cafe(name: "Coffee Cafe", description: "A busy cafe known for its espresso.", photo: photo1, numberOfSeats: 20, amenities: [.wifi, .outlets], price: .low) else {
             fatalError("Unable to instantiate cafe1")
         }
         guard let space2 = Cafe(name: "Museum Cafe", description: "Enjoy a small snack while browsing the museum.", photo: photo2, numberOfSeats: 20, amenities: [.wifi, .outlets, .bathrooms ], price: .high) else {
