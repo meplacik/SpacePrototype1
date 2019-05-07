@@ -18,6 +18,7 @@ class CafeListViewController: UIViewController {
     @IBOutlet weak var cafeTableView: UITableView!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Load the sample data.

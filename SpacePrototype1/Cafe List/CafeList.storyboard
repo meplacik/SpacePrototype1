@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k0Q-41-wNJ">
-                                <rect key="frame" x="0.0" y="163" width="414" height="733"/>
+                                <rect key="frame" x="0.0" y="333" width="414" height="563"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -86,9 +86,17 @@
                                     <outlet property="delegate" destination="RBb-IU-Aom" id="1hj-X9-0MR"/>
                                 </connections>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list_img copy" translatesAutoresizingMaskIntoConstraints="NO" id="Cxk-9K-AEE">
+                                <rect key="frame" x="0.0" y="88" width="414" height="220"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="YJc-9E-MXP"/>
+                                    <constraint firstAttribute="height" constant="220" id="p2t-c0-chl"/>
+                                </constraints>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8kb-bf-WBk">
-                                <rect key="frame" x="98.5" y="108" width="295.5" height="35"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="20" y="288" width="374" height="35"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="e4A-HK-Ddf"/>
                                 </constraints>
@@ -98,9 +106,12 @@
                                     <outlet property="delegate" destination="RBb-IU-Aom" id="UoJ-6V-z1A"/>
                                 </connections>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLy-qL-QJN">
-                                <rect key="frame" x="20" y="115.5" width="52.5" height="20"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looking for space?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yq-Wh-Knr">
+                                <rect key="frame" x="20" y="113" width="150" height="111"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="vgh-3Z-0bK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -109,17 +120,20 @@
                         <constraints>
                             <constraint firstItem="k0Q-41-wNJ" firstAttribute="leading" secondItem="qEr-bz-wsg" secondAttribute="leading" id="62J-9k-KxL"/>
                             <constraint firstItem="qEr-bz-wsg" firstAttribute="trailing" secondItem="k0Q-41-wNJ" secondAttribute="trailing" id="7bK-Kz-Gm7"/>
-                            <constraint firstItem="8kb-bf-WBk" firstAttribute="leading" secondItem="ZLy-qL-QJN" secondAttribute="trailing" constant="26" id="96q-ax-XIU"/>
+                            <constraint firstItem="1Yq-Wh-Knr" firstAttribute="leading" secondItem="K1R-KL-j6Q" secondAttribute="leadingMargin" id="Ewt-PA-DtH"/>
+                            <constraint firstItem="8kb-bf-WBk" firstAttribute="centerX" secondItem="k0Q-41-wNJ" secondAttribute="centerX" id="Hho-IB-2Xv"/>
+                            <constraint firstItem="Cxk-9K-AEE" firstAttribute="leading" secondItem="qEr-bz-wsg" secondAttribute="leading" id="LNg-72-Xhr"/>
+                            <constraint firstItem="1Yq-Wh-Knr" firstAttribute="top" secondItem="qEr-bz-wsg" secondAttribute="top" constant="25" id="Om3-Xl-zSD"/>
                             <constraint firstAttribute="bottom" secondItem="k0Q-41-wNJ" secondAttribute="bottom" id="PPM-vD-Rng"/>
-                            <constraint firstItem="ZLy-qL-QJN" firstAttribute="centerY" secondItem="8kb-bf-WBk" secondAttribute="centerY" id="SDb-mP-PMS"/>
-                            <constraint firstItem="8kb-bf-WBk" firstAttribute="top" secondItem="qEr-bz-wsg" secondAttribute="top" constant="20" id="TeY-2R-oZk"/>
-                            <constraint firstItem="qEr-bz-wsg" firstAttribute="trailing" secondItem="8kb-bf-WBk" secondAttribute="trailing" constant="20" id="Wu1-CP-O7D"/>
-                            <constraint firstItem="ZLy-qL-QJN" firstAttribute="leading" secondItem="K1R-KL-j6Q" secondAttribute="leadingMargin" id="aIz-GP-fTr"/>
-                            <constraint firstItem="k0Q-41-wNJ" firstAttribute="top" secondItem="8kb-bf-WBk" secondAttribute="bottom" constant="20" id="cBr-ss-ny4"/>
+                            <constraint firstItem="8kb-bf-WBk" firstAttribute="top" secondItem="qEr-bz-wsg" secondAttribute="top" constant="200" id="TeY-2R-oZk"/>
+                            <constraint firstItem="8kb-bf-WBk" firstAttribute="leading" secondItem="1Yq-Wh-Knr" secondAttribute="leading" id="Ylh-Xz-AiP"/>
+                            <constraint firstItem="k0Q-41-wNJ" firstAttribute="top" secondItem="8kb-bf-WBk" secondAttribute="bottom" constant="10" id="cBr-ss-ny4"/>
+                            <constraint firstItem="8kb-bf-WBk" firstAttribute="top" secondItem="1Yq-Wh-Knr" secondAttribute="bottom" constant="64" id="inz-al-yni"/>
+                            <constraint firstItem="Cxk-9K-AEE" firstAttribute="top" secondItem="qEr-bz-wsg" secondAttribute="top" id="j0y-WR-HPz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qEr-bz-wsg"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Space" id="ZDh-cx-fzh"/>
+                    <navigationItem key="navigationItem" id="ZDh-cx-fzh"/>
                     <connections>
                         <outlet property="cafeTableView" destination="k0Q-41-wNJ" id="buk-Wb-IgJ"/>
                         <outlet property="searchBar" destination="8kb-bf-WBk" id="7tE-ka-clV"/>
@@ -148,4 +162,7 @@
             <point key="canvasLocation" x="56.799999999999997" y="748.87556221889065"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list_img copy" width="216" height="108"/>
+    </resources>
 </document>
