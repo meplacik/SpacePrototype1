@@ -21,6 +21,7 @@ class CafeViewingViewController: UIViewController{
     
     @IBOutlet weak var cafeTitleLabel: UILabel!
     @IBOutlet weak var bioLabel: UILabel!
+    @IBOutlet weak var backButton: UIButton!
     
     //Amenities
     @IBOutlet weak var wifiIconView: UIStackView!
@@ -28,62 +29,23 @@ class CafeViewingViewController: UIViewController{
     @IBOutlet weak var ACIconView: UIStackView!
     @IBOutlet weak var bathroomsIconView: UIStackView!
     
+    @IBOutlet weak var priceIconView: UIImageView!
+    
     @IBOutlet weak var timePickerView: UIDatePicker!
 
-    
-    
     @IBOutlet weak var cafeImageView: UIImageView!
     
     @IBOutlet weak var capacityPieChart: PieChart!
     
-    
-    
     @IBOutlet weak var capacityLabel: UILabel!
-    
-    
-    
-    
-    
+ 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    /*
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if (pickerView == pickerView1){
-            let titleRow = days[row].substring(3)
-            return titleRow
-        }
-        else if (pickerView == pickerView2){
-            let titleRow = hours[row]
-            return titleRow
-        }
-        else if (pickerView == pickerView3){
-            let titleRow = am_pm[row]
-            return titleRow
-        }
-        return ""
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if(pickerView == pickerView1){
-            return days.count
-        }
-        else if(pickerView == pickerView2){
-            return hours.count
-        }
-        else if(pickerView == pickerView3){
-            return am_pm.count
-        }
-        return 0
-    }
-    */
     
     @IBAction func changedDate(_ sender: UIDatePicker) {
         updateCapacity()
     }
-    
-   
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,25 +60,20 @@ class CafeViewingViewController: UIViewController{
        outletsIconView.isHidden = !cafe.amenities.contains(.outlets)
        ACIconView.isHidden = !cafe.amenities.contains(.airConditioning)
        bathroomsIconView.isHidden = !cafe.amenities.contains(.bathrooms)
+       cafeTitleLabel.text = cafe.name
+        switch cafe.price{
+        case .low:
+            priceIconView.image = #imageLiteral(resourceName: "low_price")
+        case .average:
+            priceIconView.image = #imageLiteral(resourceName: "avg_price")
+        case .high:
+            priceIconView.image = #imageLiteral(resourceName: "high_price")
+        }
        updateCapacity()
     }
-/*
-    let timeLapseImages:[Capacity] = [Capacity(rawImage: UIImage(named: "cafe-1.jpg")!, detectedImage: UIImage(named: "cafe1-results.jpg")!, capacity: 35, occupants: 30),
-                                      Capacity(rawImage: UIImage(named: "cafe-2.jpg")!, detectedImage: UIImage(named: "cafe2-results.jpg")!, capacity: 35, occupants: 23),
-                                      Capacity(rawImage: UIImage(named: "cafe-3.jpg")!, detectedImage: UIImage(named: "cafe3-results.jpg")!, capacity: 35, occupants: 26),
-                                      Capacity(rawImage: UIImage(named: "cafe-4.jpg")!, detectedImage: UIImage(named: "cafe4-results.jpg")!, capacity: 35, occupants: 22),
-                                      Capacity(rawImage: UIImage(named: "cafe-5.jpg")!, detectedImage: UIImage(named: "cafe5-results.jpg")!, capacity: 35, occupants: 26),
-                                      Capacity(rawImage: UIImage(named: "cafe-6.jpg")!, detectedImage: UIImage(named: "cafe6-results.jpg")!, capacity: 35, occupants: 12),
-                                      Capacity(rawImage: UIImage(named: "cafe-7.jpg")!, detectedImage: UIImage(named: "cafe7-results.jpg")!, capacity: 35, occupants: 8),
-                                      Capacity(rawImage: UIImage(named: "cafe-8.jpg")!, detectedImage: UIImage(named: "cafe8-results.jpg")!, capacity: 35, occupants: 2)]
     
-    let idealImage1 = [Capacity(rawImage: UIImage(named: "cafe-1-ideal.jpg")!, detectedImage: UIImage(named: "cafe-1-results-ideal.jpg")!, capacity: 30, occupants: 24)]
-    let idealImage2 = [Capacity(rawImage: UIImage(named: "cafe-2-ideal.jpg")!, detectedImage: UIImage(named: "cafe-2-results-ideal.jpg")!, capacity: 12, occupants: 9)]
-    var currentLapse = 0
-    */
-    
-    let occupiedColor = UIColor.red
-    let openColor = UIColor.green
+    let occupiedColor = UIColor(red: 1, green: 100/255, blue: 0, alpha: 1)
+    let openColor = UIColor(red: 1, green: 165/255, blue: 0, alpha: 1)
     func updateCapacity(){
         let capacity = cafe.getCapacity(at: timePickerView.date)
         let textLayerSettings = PiePlainTextLayerSettings()

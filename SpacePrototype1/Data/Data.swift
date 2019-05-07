@@ -13,33 +13,25 @@ class Data{
     
     static func loadSampleSpaces() -> [Cafe] {
         
-        let photo1 = UIImage(named: "Uris_Cafe")
-        let photo2 = UIImage(named: "Joes_Coffee")
-        let photo3 = UIImage(named: "Carleton_Commons")
-        let photo4 = UIImage(named: "Hungarian_Pastry")
-        let photo5 = UIImage(named: "Dr_Smood")
-        let photo6 = UIImage(named: "Starbucks")
+        let photo1 = UIImage(named: "Coffee Cafe")
+        let photo2 = UIImage(named: "Museum Cafe")
+        let photo3 = UIImage(named: "Office Cafe")
+        let photo4 = UIImage(named: "Board Game Cafe")
         
-        guard let space1 = Cafe(name: "Uris Cafe", description: "A spacious cafe with tables for group and individual work.", photo: photo1, numberOfSeats: 20, amenities: [.wifi, .outlets, .airConditioning ], price: .high) else {
+        guard let space1 = Cafe(name: "Coffee Cafe", description: "A busy cafe known for their espresso.", photo: photo1, numberOfSeats: 20, amenities: [.wifi, .outlets], price: .low) else {
             fatalError("Unable to instantiate meal1")
         }
-        guard let space2 = Cafe(name: "Joe Coffee", description: "A small coffee shop with coffee from boutique roasters.", photo: photo2, numberOfSeats: 20, amenities: [.wifi, .outlets, .airConditioning ], price: .high) else {
+        guard let space2 = Cafe(name: "Museum Cafe", description: "Enjoy a small snack while browsing the museum.", photo: photo2, numberOfSeats: 20, amenities: [.wifi, .outlets, .bathrooms ], price: .high) else {
             fatalError("Unable to instantiate meal1")
         }
-        guard let space3 = Cafe(name: "Carleton Commons", description: "A common space often filled with studying students.", photo: photo3, numberOfSeats: 20, amenities: [.wifi, .outlets, .airConditioning ], price: .high) else {
+        guard let space3 = Cafe(name: "Office Cafe", description: "Break room with stocked fridge and kitchen.", photo: photo3, numberOfSeats: 20, amenities: [.wifi, .outlets, .airConditioning,.bathrooms ], price: .average) else {
             fatalError("Unable to instantiate meal1")
         }
-        guard let space4 = Cafe(name: "Hungarian_Pastry", description: "Known best for their turnover pastries.", photo: photo4, numberOfSeats: 20, amenities: [.wifi, .outlets, .airConditioning ], price: .high) else {
-            fatalError("Unable to instantiate meal1")
-        }
-        guard let space5 = Cafe(name: "Doctor Smood", description: "Probably the healthiest cafe in the city.", photo: photo5, numberOfSeats: 20, amenities: [.wifi, .outlets, .airConditioning ], price: .high) else {
-            fatalError("Unable to instantiate meal1")
-        }
-        guard let space6 = Cafe(name: "Starbucks", description: "We all know how this goes.", photo: photo6, numberOfSeats: 20, amenities: [.wifi, .outlets, .airConditioning ], price: .high) else {
+        guard let space4 = Cafe(name: "Board Game Cafe", description: "Happy hour and board games Monday-Friday.", photo: photo4, numberOfSeats: 20, amenities: [.wifi, .airConditioning ], price: .low) else {
             fatalError("Unable to instantiate meal1")
         }
         
-        return [space1,space2,space3,space4,space5,space6]
+        return [space1,space2,space3,space4]
     }
     
     static func capacityData(for code: String) -> Int{
