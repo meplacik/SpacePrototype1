@@ -19,16 +19,16 @@ class Data{
         let photo4 = UIImage(named: "Board Game Cafe")
         
         guard let space1 = Cafe(name: "Coffee Cafe", description: "A busy cafe known for their espresso.", photo: photo1, numberOfSeats: 20, amenities: [.wifi, .outlets], price: .low) else {
-            fatalError("Unable to instantiate meal1")
+            fatalError("Unable to instantiate cafe1")
         }
         guard let space2 = Cafe(name: "Museum Cafe", description: "Enjoy a small snack while browsing the museum.", photo: photo2, numberOfSeats: 20, amenities: [.wifi, .outlets, .bathrooms ], price: .high) else {
-            fatalError("Unable to instantiate meal1")
+            fatalError("Unable to instantiate cafe2")
         }
         guard let space3 = Cafe(name: "Office Cafe", description: "Break room with stocked fridge and kitchen.", photo: photo3, numberOfSeats: 20, amenities: [.wifi, .outlets, .airConditioning,.bathrooms ], price: .average) else {
-            fatalError("Unable to instantiate meal1")
+            fatalError("Unable to instantiate cafe3")
         }
         guard let space4 = Cafe(name: "Board Game Cafe", description: "Happy hour and board games Monday-Friday.", photo: photo4, numberOfSeats: 20, amenities: [.wifi, .airConditioning ], price: .low) else {
-            fatalError("Unable to instantiate meal1")
+            fatalError("Unable to instantiate cafe4")
         }
         
         return [space1,space2,space3,space4]

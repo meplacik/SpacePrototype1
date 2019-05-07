@@ -36,7 +36,7 @@ class Cafe {
     }
     
     func contains(_ string: String) -> Bool{
-        return name.contains(string)
+        return name.lowercased().contains(string.lowercased())
     }
     
     

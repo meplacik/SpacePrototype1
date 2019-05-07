@@ -13,7 +13,9 @@ class SpaceTableViewCell: UITableViewCell {
     
     //MARK: Properties
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var cafeDescription: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
+    
     
     
     override func awakeFromNib() {

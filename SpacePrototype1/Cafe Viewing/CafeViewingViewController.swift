@@ -21,7 +21,9 @@ class CafeViewingViewController: UIViewController{
     
     @IBOutlet weak var cafeTitleLabel: UILabel!
     @IBOutlet weak var bioLabel: UILabel!
-    @IBOutlet weak var backButton: UIButton!
+    @IBAction func backButton(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     //Amenities
     @IBOutlet weak var wifiIconView: UIStackView!
@@ -38,7 +40,13 @@ class CafeViewingViewController: UIViewController{
     @IBOutlet weak var capacityPieChart: PieChart!
     
     @IBOutlet weak var capacityLabel: UILabel!
- 
+
+    @IBAction func thumbsUp(_ sender: UIButton) {
+        sender.isSelected = true
+    }
+    @IBAction func thumbsDown(_ sender: UIButton) {
+        sender.isSelected = true
+    }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -61,14 +69,14 @@ class CafeViewingViewController: UIViewController{
        ACIconView.isHidden = !cafe.amenities.contains(.airConditioning)
        bathroomsIconView.isHidden = !cafe.amenities.contains(.bathrooms)
        cafeTitleLabel.text = cafe.name
-        switch cafe.price{
-        case .low:
+       switch cafe.price{
+       case .low:
             priceIconView.image = #imageLiteral(resourceName: "low_price")
-        case .average:
+       case .average:
             priceIconView.image = #imageLiteral(resourceName: "avg_price")
-        case .high:
+       case .high:
             priceIconView.image = #imageLiteral(resourceName: "high_price")
-        }
+       }
        updateCapacity()
     }
     

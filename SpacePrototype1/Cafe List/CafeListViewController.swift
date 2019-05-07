@@ -16,6 +16,8 @@ class CafeListViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UITextView!
     @IBOutlet weak var cafeTableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Load the sample data.
@@ -70,6 +72,7 @@ extension CafeListViewController: UITableViewDataSource, UITableViewDelegate, UI
         
         cell.nameLabel.text = space.name
         cell.photoImageView.image = space.photo
+        cell.cafeDescription.text = space.description
         
         return cell
     }
