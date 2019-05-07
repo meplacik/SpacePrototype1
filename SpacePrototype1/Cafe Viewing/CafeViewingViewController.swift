@@ -94,7 +94,18 @@ class CafeViewingViewController: UIViewController{
         let textLayerSettings = PiePlainTextLayerSettings()
         textLayerSettings.viewRadius = 55
         textLayerSettings.hideOnOverflow = true
-        textLayerSettings.label.font = UIFont.systemFont(ofSize: 8)
+        //textLayerSettings.label.font = UIFont.systemFont(ofSize: 8)
+        
+        guard let customFont = UIFont(name: "Roboto-Regular", size: UIFont.labelFontSize) else {
+            fatalError("""
+        Failed to load the "CustomFont-Light" font.
+        Make sure the font file is included in the project and the font name is spelled correctly.
+        """
+            )
+        }
+        textLayerSettings.label.font = UIFontMetrics.default.scaledFont(for: customFont)
+        textLayerSettings.label.font = UIFontMetrics.default.scaledFont(for: customFont)
+       // textLayerSettings.label.adjustsFontForContentSizeCategory = true
         
         let formatter = NumberFormatter()
         formatter.maximumFractionDigits = 1
