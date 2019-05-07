@@ -26,6 +26,10 @@
 		3A3765D82280D63C0005D688 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A3765D72280D63C0005D688 /* Pacifico-Regular.ttf */; };
 		3A3765D92280D63C0005D688 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A3765D72280D63C0005D688 /* Pacifico-Regular.ttf */; };
 		3A3765DA2280D63C0005D688 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A3765D72280D63C0005D688 /* Pacifico-Regular.ttf */; };
+		3A3765E422814C450005D688 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3765E322814C450005D688 /* Launch Screen.storyboard */; };
+		3A3765E522814C450005D688 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3765E322814C450005D688 /* Launch Screen.storyboard */; };
+		3A3765E622814C450005D688 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A3765E322814C450005D688 /* Launch Screen.storyboard */; };
+		3A3765E822814ED70005D688 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A3765E722814ED70005D688 /* Images.xcassets */; };
 		3A690A93226402C0002E5B91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A690A92226402C0002E5B91 /* AppDelegate.swift */; };
 		3A690A95226402C0002E5B91 /* CafeViewingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A690A94226402C0002E5B91 /* CafeViewingViewController.swift */; };
 		3A690A98226402C0002E5B91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A690A96226402C0002E5B91 /* Main.storyboard */; };
@@ -71,6 +75,8 @@
 		3A3765CF2280D6270005D688 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		3A3765D32280D6310005D688 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		3A3765D72280D63C0005D688 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		3A3765E322814C450005D688 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		3A3765E722814ED70005D688 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3A690A8F226402C0002E5B91 /* SpacePrototype1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpacePrototype1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A690A92226402C0002E5B91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A690A94226402C0002E5B91 /* CafeViewingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeViewingViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +176,7 @@
 		3A690A86226402C0002E5B91 = {
 			isa = PBXGroup;
 			children = (
+				3A3765E322814C450005D688 /* Launch Screen.storyboard */,
 				3A690A91226402C0002E5B91 /* SpacePrototype1 */,
 				3A690AA6226402C1002E5B91 /* SpacePrototype1Tests */,
 				3A690AB1226402C1002E5B91 /* SpacePrototype1UITests */,
@@ -204,6 +211,7 @@
 				041001F12264F82E00A47E51 /* Extensions */,
 				3A690A99226402C1002E5B91 /* Assets.xcassets */,
 				3A690A9E226402C1002E5B91 /* Info.plist */,
+				3A3765E722814ED70005D688 /* Images.xcassets */,
 			);
 			path = SpacePrototype1;
 			sourceTree = "<group>";
@@ -357,8 +365,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A3765E822814ED70005D688 /* Images.xcassets in Resources */,
 				04AEB182227E05650085B063 /* CafeList.storyboard in Resources */,
 				3A3765D42280D6310005D688 /* Roboto-Regular.ttf in Resources */,
+				3A3765E422814C450005D688 /* Launch Screen.storyboard in Resources */,
 				3A690A9A226402C1002E5B91 /* Assets.xcassets in Resources */,
 				3A3765D02280D6270005D688 /* Roboto-Bold.ttf in Resources */,
 				3A690A98226402C0002E5B91 /* Main.storyboard in Resources */,
@@ -374,6 +384,7 @@
 				3A3765D52280D6310005D688 /* Roboto-Regular.ttf in Resources */,
 				3A3765D92280D63C0005D688 /* Pacifico-Regular.ttf in Resources */,
 				3A3765D12280D6270005D688 /* Roboto-Bold.ttf in Resources */,
+				3A3765E522814C450005D688 /* Launch Screen.storyboard in Resources */,
 				3A3765A72280B2450005D688 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +396,7 @@
 				3A3765D62280D6310005D688 /* Roboto-Regular.ttf in Resources */,
 				3A3765DA2280D63C0005D688 /* Pacifico-Regular.ttf in Resources */,
 				3A3765D22280D6270005D688 /* Roboto-Bold.ttf in Resources */,
+				3A3765E622814C450005D688 /* Launch Screen.storyboard in Resources */,
 				3A3765A82280B2450005D688 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
