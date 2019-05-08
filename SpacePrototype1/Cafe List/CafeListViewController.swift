@@ -22,6 +22,7 @@ class CafeListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Load the sample data.
+        Data.initializeCountData()
         loadSampleSpaces()
         setUpTextView()
     }
@@ -82,6 +83,7 @@ extension CafeListViewController: UITableViewDataSource, UITableViewDelegate, UI
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let selectedCafe = spaces[indexPath.row]
         if let cafeViewingVC = UIStoryboard(name: "CafeViewing", bundle: nil).instantiateInitialViewController() as? CafeViewingViewController{
             cafeViewingVC.cafe = selectedCafe

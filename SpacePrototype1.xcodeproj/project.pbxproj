@@ -10,6 +10,8 @@
 		041001EC2264E0C100A47E51 /* CafeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041001EB2264E0C100A47E51 /* CafeListViewController.swift */; };
 		041001F02264F13C00A47E51 /* Capacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041001EF2264F13C00A47E51 /* Capacity.swift */; };
 		041001F32264F83E00A47E51 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041001F22264F83E00A47E51 /* StringExtension.swift */; };
+		0415D70522822A7500921DD3 /* People-Counts.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0415D70422822A7500921DD3 /* People-Counts.csv */; };
+		0415D70722822AF700921DD3 /* CSV-Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415D70622822AF700921DD3 /* CSV-Reader.swift */; };
 		04AEB17E227E04690085B063 /* Amenity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEB17D227E04690085B063 /* Amenity.swift */; };
 		04AEB180227E04EA0085B063 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEB17F227E04EA0085B063 /* Price.swift */; };
 		04AEB182227E05650085B063 /* CafeList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AEB181227E05650085B063 /* CafeList.storyboard */; };
@@ -64,6 +66,8 @@
 		041001EB2264E0C100A47E51 /* CafeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeListViewController.swift; sourceTree = "<group>"; };
 		041001EF2264F13C00A47E51 /* Capacity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capacity.swift; sourceTree = "<group>"; };
 		041001F22264F83E00A47E51 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		0415D70422822A7500921DD3 /* People-Counts.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "People-Counts.csv"; sourceTree = "<group>"; };
+		0415D70622822AF700921DD3 /* CSV-Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CSV-Reader.swift"; sourceTree = "<group>"; };
 		0495B05FBB85A924EFE874B2 /* Pods-SpacePrototype1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpacePrototype1.release.xcconfig"; path = "Target Support Files/Pods-SpacePrototype1/Pods-SpacePrototype1.release.xcconfig"; sourceTree = "<group>"; };
 		04AEB17D227E04690085B063 /* Amenity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amenity.swift; sourceTree = "<group>"; };
 		04AEB17F227E04EA0085B063 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
@@ -168,7 +172,9 @@
 		04AEB187227E06B30085B063 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0415D70422822A7500921DD3 /* People-Counts.csv */,
 				04AEB185227E06AD0085B063 /* Data.swift */,
+				0415D70622822AF700921DD3 /* CSV-Reader.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -372,6 +378,7 @@
 				3A690A9A226402C1002E5B91 /* Assets.xcassets in Resources */,
 				3A3765D02280D6270005D688 /* Roboto-Bold.ttf in Resources */,
 				3A690A98226402C0002E5B91 /* Main.storyboard in Resources */,
+				0415D70522822A7500921DD3 /* People-Counts.csv in Resources */,
 				04AEB184227E064B0085B063 /* CafeViewing.storyboard in Resources */,
 				3A3765D82280D63C0005D688 /* Pacifico-Regular.ttf in Resources */,
 			);
@@ -503,6 +510,7 @@
 				04AEB17E227E04690085B063 /* Amenity.swift in Sources */,
 				04AEB180227E04EA0085B063 /* Price.swift in Sources */,
 				04AEB186227E06AD0085B063 /* Data.swift in Sources */,
+				0415D70722822AF700921DD3 /* CSV-Reader.swift in Sources */,
 				3A690A95226402C0002E5B91 /* CafeViewingViewController.swift in Sources */,
 				3A690AC322641269002E5B91 /* SpaceTableViewCell.swift in Sources */,
 				041001F32264F83E00A47E51 /* StringExtension.swift in Sources */,
@@ -678,7 +686,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZJXXG3ML3V;
+				DEVELOPMENT_TEAM = S38ZVE6L2C;
 				INFOPLIST_FILE = SpacePrototype1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -698,7 +706,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZJXXG3ML3V;
+				DEVELOPMENT_TEAM = S38ZVE6L2C;
 				INFOPLIST_FILE = SpacePrototype1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

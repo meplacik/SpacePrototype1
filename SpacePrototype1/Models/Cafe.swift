@@ -47,9 +47,9 @@ class Cafe {
         let minute = comp.minute ?? 0
         
         let cafeCode = self.name.replacingOccurrences(of: " ", with: "_")
-        let occupants = Data.capacityData(for: "\(cafeCode)-\(hour)-\(minute)")
-        
-         return Capacity(rawImage: UIImage(named: "Uris_Cafe-0-0")!, detectedImage: UIImage(named: "Uris_Cafe-0-0-edited")!, capacity: self.numberOfSeats, occupants: occupants)
+        let occupants = Data.capacityData(for: self, at: date)
+        print("\(cafeCode)-\(hour)-\(minute)")
+         return Capacity(rawImage: UIImage(named: "\(cafeCode)-\(hour)-\(minute)")!, detectedImage: UIImage(named: "\(cafeCode)-\(hour)-\(minute)-results")!, capacity: self.numberOfSeats, occupants: occupants)
     
         //return Capacity(rawImage: UIImage(named: "\(cafeCode)-\(hour)-\(minute)")!, detectedImage: UIImage(named: "\(cafeCode)-\(hour)-\(minute)-edited")!, capacity: self.numberOfSeats, occupants: occupants)
     }

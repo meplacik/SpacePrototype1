@@ -12,15 +12,12 @@ import PieCharts
 class CafeViewingViewController: UIViewController{
  
     
-    var cafe: Cafe!{
-        didSet{
-        //    setUpView()
-        }
-    }
+    var cafe: Cafe!
+    
+    var capacity: Capacity?
     
     
     @IBOutlet weak var cafeTitleLabel: UILabel!
-    @IBOutlet weak var bioLabel: UILabel!
     @IBAction func backButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -62,8 +59,21 @@ class CafeViewingViewController: UIViewController{
         updateCapacity()
     }
     
+    @IBOutlet weak var detectionSwitch: UISwitch!
+    
+    @IBAction func switchedRevealDetection(_ sender: UISwitch) {
+        if detectionSwitch.isOn{
+            cafeImageView.image = capacity?.detectedImage
+        }else{
+            cafeImageView.image = capacity?.rawImage
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        cafeImageView.layer.masksToBounds = true
+        cafeImageView.layer.cornerRadius = 10
         setUpView()
         //image1.layer.masksToBounds = true
        // image2.layer.masksToBounds = true
@@ -71,6 +81,7 @@ class CafeViewingViewController: UIViewController{
     }
     
     func setUpView(){
+       timePickerView.setDate(Date(timeIntervalSince1970: 39600), animated: false)
        wifiIconView.isHidden = !cafe.amenities.contains(.wifi)
        outletsIconView.isHidden = !cafe.amenities.contains(.outlets)
        ACIconView.isHidden = !cafe.amenities.contains(.airConditioning)
@@ -91,6 +102,13 @@ class CafeViewingViewController: UIViewController{
     let openColor = UIColor(red: 1, green: 165/255, blue: 0, alpha: 1)
     func updateCapacity(){
         let capacity = cafe.getCapacity(at: timePickerView.date)
+        self.capacity = capacity
+        if detectionSwitch.isOn{
+             cafeImageView.image = capacity.detectedImage
+        }else{
+             cafeImageView.image = capacity.rawImage
+        }
+        
         let textLayerSettings = PiePlainTextLayerSettings()
         textLayerSettings.viewRadius = 55
         textLayerSettings.hideOnOverflow = true
@@ -117,11 +135,13 @@ class CafeViewingViewController: UIViewController{
             }
         }
     
-        
+       capacityPieChart.clear()
         let textLayer = PiePlainTextLayer()
         textLayer.settings = textLayerSettings
         capacityPieChart.layers = [textLayer]
-        capacityPieChart.models = [PieSliceModel(value: 10, color: occupiedColor), PieSliceModel(value: Double(capacity.capacity - capacity.occupants), color: openColor)]
+        print(capacity.occupants)
+        capacityPieChart.models = [PieSliceModel(value: Double(capacity.occupants), color: occupiedColor), PieSliceModel(value: Double(capacity.capacity - capacity.occupants), color: openColor)]
+        
         /*
         capacityPieChart.removeSlices()
         capacityPieChart.insertSlice(index: 0, model:  PieSliceModel(value: 10, color: UIColor.red))
